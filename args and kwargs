@@ -1,0 +1,31 @@
+#exercicios args and kwargs https://colab.research.google.com/drive/1TpKMFZHtCjs5cTZ0CJA2mfEH5lR_jqPR?usp=sharing#scrollTo=0nTbeNwUA94L
+
+#Write a function called average_score that calculates the average of an arbitrary number of scores.
+
+def average_score(*args):
+
+    return sum(args) / len(args)
+
+print(average_score(85, 90, 78))
+
+#Write a function describe_pet that accepts a pet’s name and type as required arguments, but can also take any number of keyword details
+
+def describe_pet(pet_name, type, **kwargs):
+    print(f"Pet Name: {pet_name}\nAnimal type: {type}")
+    for key, value in kwargs.items():
+        print(f"{key} : {value}")
+
+describe_pet("Fofu", "Cat", favorite_food="Sardinha", Alergica="Dipirona")
+
+#Write a function make_sandwich that accepts any number of ingredients and any number of optional preferences.
+
+def make_sandwich(*args, **kwargs):
+    print("Making a sandwish with:")
+    for args in args:
+        print(args)
+    print("Options:")
+    for key, value in kwargs.items():
+        print(f"{key} : {value}")
+
+make_sandwich("turkey", "lettuce", "tomato", sauce="mayo", toasted=True)
+
