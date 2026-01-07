@@ -39,3 +39,9 @@ def function(one, two, three):
 
 numbers = {"one": 1, "two": 2, "three": 3}
 function(**numbers)
+
+#Annotations 
+
+type Number = int | float
+def add(a: Number, b: Number) -> Number:
+    return a + b
