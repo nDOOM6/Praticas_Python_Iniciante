@@ -29,3 +29,13 @@ def make_sandwich(*args, **kwargs):
 
 make_sandwich("turkey", "lettuce", "tomato", sauce="mayo", toasted=True)
 
+#Unpacking Keyword Arguments
+
+def function(one, two, three):
+     print(f"{one = }")
+     print(f"{two = }")
+     print(f"{three = }")
+
+
+numbers = {"one": 1, "two": 2, "three": 3}
+function(**numbers)
